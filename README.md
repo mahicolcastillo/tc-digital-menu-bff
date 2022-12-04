@@ -1,4 +1,4 @@
-# API for Products TuComanda
+# BFF for Digital Menu TuComanda
 
 Logger:
 info => use only for informational things like: start processes, success responses, but never include results.
