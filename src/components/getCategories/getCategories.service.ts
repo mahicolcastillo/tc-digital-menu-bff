@@ -12,7 +12,7 @@ const getCategoriesService = async(headers: IncomingHttpHeaders) => {
 
         if(!headers.clientname) throw 'clientName not defined';
 
-        const response = await axios.get(config.microservices.MS_PRODUCTS + 'getCategories', { headers });
+        const response = await axios.get(config.apis.API_PRODUCTS + 'getCategories', { headers });
         logger.debug(`Response data: ${JSON.stringify(response.data.payload)}`);
 
         return response.data.payload;

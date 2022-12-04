@@ -11,7 +11,7 @@ const getPublicTokenService = async(headers: IncomingHttpHeaders) => {
         logger.info(`Starting service getPublicToken`);
 
         if(!headers.clientname) throw 'clientName not defined';
-        const response = await axios.get(config.microservices.MS_GENERATE_TOKEN + 'getPublicToken', { headers });
+        const response = await axios.get(config.apis.API_PRODUCTS + 'getPublicToken', { headers });
         logger.debug(`Response data: ${JSON.stringify(response.data.payload)}`);
 
         return response.data.payload;

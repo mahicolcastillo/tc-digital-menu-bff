@@ -2,8 +2,8 @@ import { parseConfig } from '../utils/parseConfig.util';
 
 const config = parseConfig({
     globalPath: {
-        info        : "Base path for api products",
-        default     : "/api/tc-products-api",
+        info        : "Base path for bff digital menu",
+        default     : "/bff/tc-digital-menu-bff",
     },
     port: {
         info        : "Port for application",
@@ -22,17 +22,12 @@ const config = parseConfig({
             required    : true,
         },
     },
-    microservices: {
-        MS_GENERATE_TOKEN: {
-            info        : "Microservice for generate token",
-            env         : "MS_GENERATE_TOKEN",
+    apis: {
+        API_PRODUCTS: {
+            info        : "API for products",
+            env         : "API_PRODUCTS",
             required    : true,
         },
-        MS_PRODUCTS: {
-            info        : "Microservice for manage products",
-            env         : "MS_PRODUCTS",
-            required    : true,
-        }
     }
 });
 

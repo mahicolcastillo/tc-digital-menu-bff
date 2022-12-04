@@ -39,7 +39,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=mahicolcastillo
-          -Dsonar.projectKey=mahicolcastillo_tc-products-api
+          -Dsonar.projectKey=mahicolcastillo_tc-digital-menu-bff
       env:
         GITHUB_TOKEN: ${{ github.token }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
