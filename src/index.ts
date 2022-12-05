@@ -1,7 +1,7 @@
 import express              from 'express';
 import helmet               from 'helmet';
-import bodyParser           from 'body-parser';
 import listEndpoints        from 'express-list-endpoints';
+import cors                 from 'cors';
 import { Logger as log }    from 'tslog';
 require('express-async-errors');
 
@@ -13,8 +13,10 @@ const logger : log = new log({ displayFunctionName: false});
 
 const serverStart = async() => {
     try {
-        app.use(bodyParser.json());
+        app.use(express.json());
+        app.use(cors());
         app.use(helmet());
+        app.use(helmet.hsts({maxAge: 31536000}));
 
         routes(app);
         showRoutes();
